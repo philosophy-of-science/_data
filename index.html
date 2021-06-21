@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Philosophy of Science Articles</h1>
+      <p>{{articles[0].date}}</p>
+    </header>
+    <div class="container">
+      {% for article in articles %}
+      <article>
+        <div class="body">
+          <p>🆕 Article</p>
+          <p>📄 {{article.title}}</p>
+          <p>✒️ {{article.creator}}</p>
+
+          <p class="publication">
+            🖨️ <em>Philosophy of Science</em> {{article.volume}}, no.
+            {{article.issue}} ({{article.date}}): {{article.pages}}.
+          </p>
+          <a class="link" href="{{article.link}}">🔗 {{article.link}}</a>
+        </div>
+        <img src="{{article.image}}" alt="" />
+      </article>
+      {% endfor %}
+    </div>
+  </body>
+</html>
