@@ -25,11 +25,17 @@
             🖨️ <em>Philosophy of Science</em> {{article.volume}}, no.
             {{article.issue}} ({{article.date}}): {{article.pages}}.
           </p>
+
           <a class="link" href="{{article.link}}">🔗 {{article.link}}</a>
         </div>
         <img src="{{article.image}}" alt="" />
+        <img src="{{article.imageAbstract}}" alt="" />
       </article>
       {% endfor %}
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>
+      mediumZoom(document.querySelectorAll("img"));
+    </script>
   </body>
 </html>
